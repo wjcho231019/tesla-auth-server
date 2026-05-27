@@ -1,18 +1,15 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/callback", "destination": "/callback.html" }
+  ],
   "headers": [
     {
       "source": "/.well-known/appspecific/(.*)",
       "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/x-pem-file"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
+        { "key": "Content-Type", "value": "application/x-pem-file" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
   ]
