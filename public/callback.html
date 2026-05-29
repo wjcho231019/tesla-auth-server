@@ -28,7 +28,7 @@ const code = params.get('code');
 
 if (code) {
   const fullUrl = window.location.href;
-  const targetUrl = 'tesla-web-ui.onrender.com/auto_reauth?callback=' + encodeURIComponent(fullUrl);
+  const targetUrl = 'https://tesla-web-ui.onrender.com/auto_reauth?callback=' + encodeURIComponent(fullUrl);
   setTimeout(function(){ window.location.href = targetUrl; }, 500);
 } else {
   document.getElementById('spin').style.display = 'none';
